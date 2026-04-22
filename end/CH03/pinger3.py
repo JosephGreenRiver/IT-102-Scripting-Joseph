@@ -8,7 +8,7 @@ import platform
 import os
 
 # Define the prefix to begin pinging
-ip_prefix = "192.168.0."
+ip_prefix = "10.10.0."
 # Determine the currrent OS
 currrent_os = platform.system().lower()
 # Loop from 0 - 254
