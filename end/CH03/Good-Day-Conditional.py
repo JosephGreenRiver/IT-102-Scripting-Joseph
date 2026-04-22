@@ -12,6 +12,3 @@ elif user_answer == "n":
     print("I'm sorry.")
 else:
     print("Please try again.")
-
-
-#### LOOP ASSIGNEMT
