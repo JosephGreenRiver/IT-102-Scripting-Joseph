@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# A Conditional script with a loop in python with inputs 
+# A Conditional script with a function loop in python with inputs 
 # Created by Joseph Willoughby 05-02-2026
 
 # Prompts the user for a y/n answer into a variable
