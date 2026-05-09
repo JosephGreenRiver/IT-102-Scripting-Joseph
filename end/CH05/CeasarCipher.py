@@ -2,12 +2,13 @@
 # A basic Caesar cipher encryption and decryption program in python with inputs 
 # Created by Joseph Willoughby 05-09-2026
 
-"""
-Call to main
-"""
-
 def cesar_encrypt(message: str, shift:int) -> str:
+    """
+    Encrypts a message by shfiting each letter a "shift" amount.
+    A-Z
+    a-z
 
+    """
     result = []
 
     for char in message:
@@ -16,21 +17,23 @@ def cesar_encrypt(message: str, shift:int) -> str:
                 result.append(chr(shifted))
         elif char.islower():
                 shifted = (ord(char) - ord("a") + shift) % 26 + ord("a") 
-                result.append(char(shifted))
+                result.append(chr(shifted))
         else: 
             result.append(char)
     return "".join(result)
 
 
 def ceasar_decrypt(ciphertext: str, shift: int) -> str:
-
+    """
+    Decrypt a Caesar Cipher message by shifing the letters backwards.
+    """
 
     return cesar_encrypt(ciphertext, -shift)
 
 
 def get_shift_value() -> int:
     """
-    Promts the user for the amount of shifts to take
+    Promts the user for the amount of shifts to take.
     """
 
     while True:
@@ -44,7 +47,7 @@ def get_shift_value() -> int:
 
 
 def main ():
-    print("Ceasar Cipher Encrypt and decrypt")
+    print("Ceasar Cipher Encrypt and Decrypt")
     message = input("Enter a message: ").strip()
     if not message:
          print("Noo message entered. Exiting")
@@ -61,7 +64,7 @@ def main ():
     answer = input("Decrypt the message? (yes/no): ").strip().casefold()
 
     if answer in ("yes", "y"):
-         decrypted = cesar_decrypt(encrypted, shift)
+         decrypted = ceasar_decrypt(encrypted, shift)
          print(F"Decrypted Message: {decrypted}")
 
         #confirm
