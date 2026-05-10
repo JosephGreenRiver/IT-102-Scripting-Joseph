@@ -46,6 +46,7 @@ def get_shift_value() -> int:
                 print("That is noit a valid integer.")
 
 
+#Define Main
 def main ():
     print("Ceasar Cipher Encrypt and Decrypt")
     message = input("Enter a message: ").strip()
