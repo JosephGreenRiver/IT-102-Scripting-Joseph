@@ -2,6 +2,15 @@
 # A basic Caesar cipher encryption and decryption program in python with inputs 
 # Created by Joseph Willoughby 05-09-2026
 
+"""
+This is a basic Caesar cipher encryption and decryption program 
+that will take the users inputed message and encrypt it by the users selected shift value
+the user can choose to decrypt their message and recive a validation that the decryption was sucessfull
+"""
+
+
+
+#Define Encrypt
 def cesar_encrypt(message: str, shift:int) -> str:
     """
     Encrypts a message by shfiting each letter a "shift" amount.
@@ -22,7 +31,7 @@ def cesar_encrypt(message: str, shift:int) -> str:
             result.append(char)
     return "".join(result)
 
-
+#Define Decrypt
 def ceasar_decrypt(ciphertext: str, shift: int) -> str:
     """
     Decrypt a Caesar Cipher message by shifing the letters backwards.
@@ -30,7 +39,7 @@ def ceasar_decrypt(ciphertext: str, shift: int) -> str:
 
     return cesar_encrypt(ciphertext, -shift)
 
-
+#Define Shift Value
 def get_shift_value() -> int:
     """
     Promts the user for the amount of shifts to take.
